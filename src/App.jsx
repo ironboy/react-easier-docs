@@ -201,10 +201,6 @@ export default function App() {
         font-size: 95%;
       }
 
-      .page-2 pre:last-child {
-        margin-top: -30px;
-      }
-
       .navbar {
         background-color: #2a457a !important;
         padding: 20px 0 18px;
@@ -279,6 +275,22 @@ export default function App() {
 
       footer a {
         color: #fff;
+      }
+
+      #single-file-components ~ pre ~ pre {
+        margin-top: -30px;
+      }
+
+      #single-file-components ~ pre ~ pre ~ pre {
+        margin-top: 0;
+      }
+
+      #single-file-components ~ pre ~ .copier {
+        display: none;
+      }
+
+      #single-file-components ~ pre ~ pre ~ .copier {
+        display: block;
       }
 
     `}

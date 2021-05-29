@@ -1,7 +1,7 @@
 ### React Easier!
 **react-easier** aims to take the cruft out of developing with React. 
 
-* Why should reacting on state variable changes, binding of state variables to form elements, conditional logic and other things  be harder to do in React than in other frameworks?
+* Why should reacting on changes to state variables, binding of state variables to form elements, conditional logic and other things  be harder to do in React than in other frameworks?
 * They shouldn't and **react-easier** makes sure they aren't 😊. 
 
 #### Install
@@ -14,7 +14,7 @@ npm i react-easier
 ##### Small and dependency free
 Version //version// of **react-easier** is small, //size// (~//gzipped// gzipped), and dependency free. 
 
-More size details on: [bundlephobia.com](https://bundlephobia.com/result?p=react-easier)
+(More size details on [bundlephobia.com](https://bundlephobia.com/result?p=react-easier).)
 
 
 ##### Works with both Create React App and Vite
@@ -302,9 +302,6 @@ The **SFC** (*Single File Component*) feature allows you to include your css ins
 * In the property **template** you write your template (the main *jsx* for the  component).
 * In the property **style** you write your css.
 
-
-<div>
-
 ```jsx
 import {SFC} from 'react-easier';
 
@@ -340,8 +337,6 @@ export default function MyComponent() {
 
   />;
 ```
-
-</div>
 
 ##### Important: Scoped styling!
 The css will only be applied to elements inside your component! It is scoped. If you want to css that gets applied to the whole HTML document you can use **@global**:

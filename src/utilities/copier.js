@@ -7,7 +7,11 @@ document.body.addEventListener('click', e => {
 function copier(el) {
   let temp = document.createElement('textarea');
   document.body.append(temp);
-  temp.value = el.innerText;
+  let content = el.innerText;
+  if (content.includes('Then return a SFC with your template and style')) {
+    content += '\n      @global {\n        body {\n          margin: 0\n        }\n      }\n\n      h1 {\n        color: blue;\n      }\n\n    `}\n\n  />;\n';
+  }
+  temp.value = content;
   temp.select();
   temp.setSelectionRange(0, 99999);
   document.execCommand("copy");
