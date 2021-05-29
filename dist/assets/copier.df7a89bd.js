@@ -1,0 +1,1 @@
+document.body.addEventListener("click",(e=>{let t=e.target.closest(".copier div");t&&function(e){let t=document.createElement("textarea");document.body.append(t),t.value=e.innerText,t.select(),t.setSelectionRange(0,99999),document.execCommand("copy"),t.remove()}(t.parentElement.nextSibling)}));

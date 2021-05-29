@@ -1,0 +1,1 @@
+async function a(a){let e=Object.keys(await(await fetch("https://bundlephobia.com/api/package-history?package="+a)).json()).slice(-1)[0];a+="@"+e;let t=await(await fetch("https://bundlephobia.com/api/size?package="+a)).json(),i=Math.round(t.gzip/100)/10+" kB";return t=Math.round(t.size/100)/10+" kB",{version:e,size:t,gzipped:i}}export default a;
