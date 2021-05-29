@@ -1,1 +1,0 @@
-function e(){return React.createElement("div",null,React.createElement("form",{onSubmit:prevent((e=>{console.log(e)}))},React.createElement("input",{type:"text",name:"name"}),React.createElement("input",{type:"submit",value:"send"})))}export default e;

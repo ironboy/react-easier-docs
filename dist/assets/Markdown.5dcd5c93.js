@@ -1,0 +1,1 @@
+function e(e){return marked.setOptions({highlight:(e,r)=>Prism.highlight(e,Prism.languages[r],r)}),React.createElement("div",{dangerouslySetInnerHTML:{__html:marked(String(e.children)).replace(/<pre/g,'<div class="copier"><div title="Copy"></div></div><pre').replace(/<a/g,'<a target="_blank"')}})}export default e;
