@@ -176,7 +176,7 @@ const s = useStates({
 });
 ```
 Of course can use arrays and objects etc as values to (and nest them).
-As soon as you change the value of a property React will re-render.
+*As soon as you change the value of a property React will re-render!*
 
 ##### Binding
 Use the following syntax to bind your state variables to input fields (thus creating [**controlled components**](https://reactjs.org/docs/forms.html)).
