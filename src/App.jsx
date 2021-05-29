@@ -207,6 +207,7 @@ export default function App() {
       }
 
       .navbar-brand {
+        font-size: 18px;
         color: #fff !important;
         padding-left: 30px;
         -webkit-user-select: none;
@@ -227,12 +228,15 @@ export default function App() {
         }
       }
 
+      img[src="/logo.svg"]{
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 70px;
+      }
+
       @media (prefers-reduced-motion: no-preference) {
         img[src="/logo.svg"] {
-          position: absolute;
-          right: 15px;
-          top: 15px;
-          width: 70px;
           animation: logo-spin infinite 20s linear;
         }
       }
@@ -291,6 +295,10 @@ export default function App() {
 
       #single-file-components ~ pre ~ pre ~ .copier {
         display: block;
+      }
+
+      code, pre {
+        white-space:pre-wrap;
       }
 
     `}
