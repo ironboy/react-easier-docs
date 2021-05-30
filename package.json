@@ -9,6 +9,7 @@
     "server": "node \"dist-backend/index\""
   },
   "dependencies": {
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "marked": "^2.0.5",
     "prismjs": "^1.23.0",
