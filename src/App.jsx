@@ -66,10 +66,11 @@ export default function App() {
       @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     
       @global {
+
         body {
           font-family: 'Open Sans';
           font-size: 17px;
-          line-height: 160%
+          line-height: 160%;
         }
 
         #root {
@@ -243,6 +244,7 @@ export default function App() {
 
       .copier {
         position: absolute;
+        z-index: 10;
         width: calc(100% - 32px);
       }
 
@@ -282,7 +284,7 @@ export default function App() {
       }
 
       #single-file-components ~ pre ~ pre {
-        margin-top: -30px;
+        margin-top: -48px;
       }
 
       #single-file-components ~ pre ~ pre ~ pre {
@@ -299,6 +301,57 @@ export default function App() {
 
       code, pre {
         white-space:pre-wrap;
+      }
+
+      code ol {
+        margin-bottom: -32px;
+        counter-reset: item;
+        list-style-type: none;
+      }
+
+      #single-file-components ~ pre ~ pre code ol {
+        counter-reset: item 18;
+      }
+
+      #single-file-components ~ pre ~ pre ~ pre code ol {
+        counter-reset: item;
+      }
+
+      code li {
+        display:  flex;
+        min-height: 20px;
+        position: relative;
+      }
+
+      code li:before {
+        display: block;
+        position: absolute;
+        left: -40px;
+        width: 20px;
+        vertical-align: bottom;
+        content: counter(item) "  ";
+        counter-increment: item;
+        color: #bbb;
+      }
+
+      code li div {
+        text-indent: -18px;
+        padding-left: 10px;
+      }
+
+      code li:nth-child(-n+9):before {
+        left: -31px;
+      }
+
+      #single-file-components ~ pre ~ pre code li:nth-child(-n+9):before {
+        left: -40px;
+      }
+
+      .cspaces {
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
       }
 
     `}
