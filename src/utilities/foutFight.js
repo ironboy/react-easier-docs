@@ -10,7 +10,6 @@ export default async function foutFight(s) {
   document.body.classList.add('font');
   while (orgWidth === el.offsetWidth || !s.md.length) {
     await sleep(10);
-    console.log('Waiting')
   }
   d.remove();
   document.querySelector('.wait').classList.add('toNada');
