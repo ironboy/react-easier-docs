@@ -33,7 +33,7 @@ The components **If**, **Else** and **ElseIf** work together to give you a more 
 ```
 
 * **ElseIf** also has a **c** property. It will render if the condition is truthy **and** the If-condition was not.
-* **Else** does not have any property. It will render if the **If** (and **Elseif**:s if present) did not.
+* **Else** does not have any property. It will render if the **If** (and **ElseIf**:s if present) did not.
 
 ##### Important: ElseIf and Else goes inside an If
 Put your **ElseIf** and **Else**-statements inside the **If**-statement they belong to:
@@ -124,7 +124,7 @@ The **prevent** feature calls [event.preventDefault](https://reactjs.org/docs/ha
 
 A classic example of where we use *event.preventDefault* in React is during form processing: You want an event handler to run on submit, but you *don't* want the submit event to reload your application.
 
-For those of us who think that it easier to remember to do this when we bind our event handler in jsx, rather than inside the event handler, **prevent** comes to the rescue.
+For those of us who think that it is easier to remember to do this when we bind our event handler in jsx, rather than inside the event handler, **prevent** comes to the rescue.
 
 #### How?
 We don't have to write *event.preventDefault()* inside our submit event handler if we do:
@@ -175,7 +175,7 @@ const s = useStates({
   favoriteColor: 'green'
 });
 ```
-Of course can use arrays and objects etc as values to (and nest them).
+Of course you can use arrays and objects etc as values too (and nest them).
 *As soon as you change the value of a property React will re-render!*
 
 ##### Binding
@@ -238,7 +238,7 @@ A context is React's idea of a global store -- state variables that can be reach
 * If you wrap your whole **App** in a context -- then it's a global context.
 * You can use several **contexts** in your application if you need to.
 
-Setting up a context can be a bit complicated but the **withContext + useNamedContext** it's easy!
+Setting up a context can be a bit complicated but **withContext + useNamedContext** make it easy!
 
 #### How?
 Let's set up a global context in your **App** component:
@@ -339,7 +339,7 @@ export default function MyComponent() {
 ```
 
 ##### Important: Scoped styling!
-The css will only be applied to elements inside your component! It is scoped. If you want to css that gets applied to the whole HTML document you can use **@global**:
+The css will only be applied to elements inside your component! It is scoped. If you want to write css that gets applied to the whole HTML document you can use **@global**:
 
 ```css
 @global {
@@ -409,7 +409,7 @@ And if you want to change an exported name, you use **as**:
 #### Important: Settings in Create React App
 **Create React App** uses [ESLint](https://eslint.org/) with a set of linting rules meant to make React development easier.
 
-Among those rules is one that throws an error and refuse to compile if you use global variables, because they are seen as undeclared variables by the linter.
+Among those rules is one that throws an error and makes CRA refuse to compile if you use global variables, because they are seen as undeclared variables by the linter.
 
 ##### How do I solve this?
 Add a file named **.eslintrc.json** at the root of your project with an override of this particular rule. This will allow you to use **global imports**:
