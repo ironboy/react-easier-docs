@@ -14,7 +14,7 @@ npm i react-easier
 ##### Small and dependency free
 Version //version// of **react-easier** is small, //size// (~//gzipped// gzipped), and dependency free. 
 
-(More size details on [bundlephobia.com](https://bundlephobia.com/result?p=react-easier).)
+(More size details on [bundlephobia.com](https://bundlephobia.com/result?p=react-easier@//version//).)
 
 
 ##### Works with both Create React App and Vite
@@ -44,10 +44,10 @@ import {If, Else, ElseIf} from 'react-easier';
 export default function MyComponent() {
 
   // This is an Australian app :)
-  // Spring - September, October and November.
-  // Summer - December, January and February.
-  // Autumn - March, April and May.
-  // Winter - June, July and August.
+  // Spring - Sep, Oct, Nov
+  // Summer - Dec, Jan, Feb
+  // Autumn - Mar, Apr, May
+  // Winter - Jun, Jul, Aug
   let month = new Date().getMonth() + 1; // 1-12
 
   return <div>
@@ -218,7 +218,9 @@ export default function MyComponent() {
       </label>
     </p>
     <h3>
-      Hello! My name is {s.name || 'Unknown'} and I am {s.age || 'many'} years old.<br />
+      Hello! My name is {s.name || 'Unknown'} 
+      and I am {s.age || 'many'} years old.
+      <br />
       My favorite color is {s.favoriteColor}.
     </h3>
     <p>
@@ -320,6 +322,7 @@ export default function MyComponent() {
 
     style=
     {/*css*/`
+
 ```
 
 ```css
@@ -336,6 +339,7 @@ export default function MyComponent() {
     `}
 
   />;
+}
 ```
 
 ##### Important: Scoped styling!
