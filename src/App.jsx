@@ -68,10 +68,14 @@ export default function App() {
       @global {
 
         body {
-          font-family: 'Open Sans';
           font-size: 17px;
           line-height: 160%;
           overflow-x: hidden;
+          font-family: Sans-Serif;
+        }
+
+        body.font {
+          font-family: 'Open Sans', Sans-Serif;
         }
 
         #root {
