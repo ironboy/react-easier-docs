@@ -71,6 +71,7 @@ export default function App() {
           font-family: 'Open Sans';
           font-size: 17px;
           line-height: 160%;
+          overflow-x: hidden;
         }
 
         #root {
