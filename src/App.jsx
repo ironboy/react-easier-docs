@@ -270,6 +270,10 @@ export default function App() {
         opacity: 1;
       }
 
+       h5 + .copier {
+        margin-top: 12px;
+      }
+
       h5 + .copier + pre {
         margin-top: 12px;
       }
