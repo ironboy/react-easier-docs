@@ -1,0 +1,1 @@
+function e(){return React.createElement(Navbar,{bg:"light",expand:"lg"},React.createElement(Navbar.Brand,{href:"#"},React.createElement("img",{alt:"logo",src:"/logo.svg"}),React.createElement("span",{className:"bbbrand"},"React Easier")," ",React.createElement("i",null,"– React with less cruft")))}export default e;

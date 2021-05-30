@@ -9,6 +9,6 @@ export default function Markdown(props) {
     }
   });
   return <div dangerouslySetInnerHTML={{
-    __html: marked(String(props.children)).replace(/<pre/g, '<div class="copier"><div title="Copy"></div></div><pre').replace(/<a/g, '<a target="_blank"')
+    __html: marked(String(props.children)).replace(/<pre/g, '<div class="copier"><div title="Copy"></div></div><pre').replace(/<a/g, '<a rel="noreferrer" target="_blank"')
   }} />
 }
