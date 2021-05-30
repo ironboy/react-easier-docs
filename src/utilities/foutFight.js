@@ -1,4 +1,4 @@
-export default async function foutFight() {
+export default async function foutFight(s) {
   let sleep = ms => new Promise(res => setTimeout(res, ms));
   let d = document.createElement('div');
   d.innerHTML = '<b>giItT1WQy@!-/#</b>';
@@ -8,7 +8,7 @@ export default async function foutFight() {
   let el = d.querySelector('b');
   let orgWidth = el.offsetWidth;
   document.body.classList.add('font');
-  while (orgWidth === el.offsetWidth) {
+  while (orgWidth === el.offsetWidth || !s.md.length) {
     await sleep(10);
     console.log('Waiting')
   }

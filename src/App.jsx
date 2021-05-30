@@ -10,7 +10,7 @@ export default function App() {
   });
 
   useEffect(async () => {
-    foutFight();
+    foutFight(s);
     let md = await (await fetch('/markdown.md')).text();
     Object.entries(await npmInfo('react-easier')).forEach(([key, val]) =>
       md = md.split(`//${key}//`).join(val)
