@@ -181,7 +181,7 @@ export default function App() {
         width: 50%;
         text-align: center;
         padding: 3px 0;
-        vertical-align: top;
+        vertical-align: middle;
       }
 
       @media (min-width: 992px) {
