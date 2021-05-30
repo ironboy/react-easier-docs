@@ -14,7 +14,7 @@ npm i react-easier
 ##### Small and dependency free
 Version //version// of **react-easier** is small, //size// (~//gzipped// gzipped), and dependency free. 
 
-(More size details on [bundlephobia.com](https://bundlephobia.com/result?p=react-easier).)
+(More size details on [bundlephobia.com](https://bundlephobia.com/result?p=react-easier@//version//).)
 
 
 ##### Works with both Create React App and Vite
