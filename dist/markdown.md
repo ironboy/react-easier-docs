@@ -136,6 +136,19 @@ import {prevent} from 'react-easier';
 <form onSubmit={prevent(sendData)}>
 ```
 
+##### With prevent
+```jsx
+const sendData = () => {
+  // process form data and (maybe) send via fetch
+}
+
+return <div>
+  <form onSubmit={prevent(sendData)}>
+    {/* some input fields here */}
+  </form>
+</div>;
+```
+
 ##### Traditional syntax without prevent
 ```jsx
 const sendData = event => {
@@ -145,19 +158,6 @@ const sendData = event => {
 
 return <div>
   <form onSubmit={sendData}>
-    {/* some input fields here */}
-  </form>
-</div>;
-```
-
-##### With prevent
-```jsx
-const sendData = () => {
-  // process form data and (maybe) send via fetch
-}
-
-return <div>
-  <form onSubmit={prevent(sendData)}>
     {/* some input fields here */}
   </form>
 </div>;
