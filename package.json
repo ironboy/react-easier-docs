@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "xbuild": "vite build",
     "serve": "vite preview",
     "server": "node \"dist-backend/index\"",
-    "start": "vite"
+    "start": "node \"dist-backend/index\""
   },
   "dependencies": {
     "express": "^4.17.1",
