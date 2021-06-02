@@ -30,8 +30,8 @@ export default function App() {
   }, []);
 
   async function gotoHash() {
+    window.scrollTo(0, 0);
     if (s.hashGotoOnLoadDone) {
-      window.scrollTo(0, 0);
       s.pstyle = 'out';
       await sleep(150);
     }
@@ -203,15 +203,20 @@ export default function App() {
       }
 
       @media (min-width: 992px) {
+
         .contentMenu {
           width: 90%;
+          top: 20px;
+          position: sticky;
         }
+
         .contentMenu p {
           text-align: left;
           display: block;
           padding: 10px 0;
           width: 100%;
         }
+
       }
 
       .contentMenu .active {
