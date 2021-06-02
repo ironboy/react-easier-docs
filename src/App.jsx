@@ -31,12 +31,12 @@ export default function App() {
 
   async function gotoHash() {
     if (s.hashGotoOnLoadDone) {
+      window.scrollTo(0, 0);
       s.pstyle = 'out';
       await sleep(150);
     }
     s.page = s.slugs.indexOf(location.hash.slice(1));
     s.page < 0 && (s.page = 0);
-    window.scrollTo(0, 0);
     s.pstyle = 'in';
   }
 
