@@ -5,9 +5,12 @@ export default function App() {
     menuItems: [],
     slugs: [],
     page: 0,
+    pstyle: '',
     version: 0,
     hashGotoOnLoadDone: false
   });
+
+  const sleep = ms => new Promise(res => setTimeout(res, ms));
 
   useEffect(async () => {
     foutFight(s);
@@ -26,10 +29,15 @@ export default function App() {
     window.onhashchange = gotoHash;
   }, []);
 
-  function gotoHash() {
+  async function gotoHash() {
+    if (s.hashGotoOnLoadDone) {
+      s.pstyle = 'out';
+      await sleep(150);
+    }
     s.page = s.slugs.indexOf(location.hash.slice(1));
     s.page < 0 && (s.page = 0);
     window.scrollTo(0, 0);
+    s.pstyle = 'in';
   }
 
   function menuChoice(e) {
@@ -52,7 +60,7 @@ export default function App() {
               </p>)}
             </div>
           </div>
-          <div className={'col-lg-9 page-' + s.page}>
+          <div className={'col-lg-9 page page-' + s.page + ' ' + s.pstyle}>
             <Markdown>{s.md[s.page]}</Markdown>
           </div>
         </div>
@@ -174,7 +182,7 @@ export default function App() {
       .contentMenu {
         padding: 10px 20px;
         background-color: #2a457a;
-        color: #fff;
+        color: #dadada;
         border-radius: 10px;
         -webkit-user-select: none;
         user-select: none;
@@ -188,6 +196,10 @@ export default function App() {
         text-align: center;
         padding: 3px 0;
         vertical-align: middle;
+      }
+
+      .contentMenu p:hover {
+        color: #fff;
       }
 
       @media (min-width: 992px) {
@@ -205,6 +217,21 @@ export default function App() {
       .contentMenu .active {
         font-weight: bold;
         font-size: 95%;
+        color: #fff;
+      }
+
+      .page {
+        transform-origin: top center;
+      }
+      
+      .page.out {
+        transition: transform 150ms ease-in;
+        transform: scale(0,1);
+      }
+
+      .page.in {
+        transition: transform 150ms ease-out;
+        transform: scale(1,1);
       }
 
       .navbar {
