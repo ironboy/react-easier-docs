@@ -33,7 +33,7 @@ export default function App() {
     window.scrollTo(0, 0);
     if (s.hashGotoOnLoadDone) {
       s.pstyle = 'out';
-      await sleep(150);
+      // await sleep(150);
     }
     s.page = s.slugs.indexOf(location.hash.slice(1));
     s.page < 0 && (s.page = 0);
@@ -230,13 +230,13 @@ export default function App() {
       }
       
       .page.out {
-        transition: transform 150ms ease-in;
-        transform: scale(0,1);
+        /*transition: transform 150ms ease-in;
+        transform: scale(0,1);*/
       }
 
       .page.in {
-        transition: transform 150ms ease-out;
-        transform: scale(1,1);
+        /*transition: transform 150ms ease-out;
+        transform: scale(1,1);*/
       }
 
       .navbar {
