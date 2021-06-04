@@ -3,7 +3,7 @@ export default async function (pname) {
     'https://bundlephobia.com/api/package-history?package=' + pname, { cache: "no-cache" })).json();
   let version = Object.keys(f).slice(-1)[0];
   let gzip = f[version].gzip, size = f[version].size;
-  if (!gzip && !size) {
+  if (!gzip || !size) {
     pname += '@' + version;
     size = await (await fetch('https://bundlephobia.com/api/size?package=' + pname, { cache: "no-cache" })).json();
     gzip = size.gzip;
